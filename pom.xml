@@ -76,13 +76,3 @@
         </plugins>
     </build>
 </project>
-        @Test
-        void findMaxWhenAllNumbersAreSame() {
-        StatisticsService service = new StatisticsService();
-        long[] incomesInBillions = {10, 10, 10, 10}; // Все числа одинаковые
-        long expected = 10;
-
-        long actual = service.findMax(incomesInBillions);
-
-        Assertions.assertEquals(expected, actual);
-        }
