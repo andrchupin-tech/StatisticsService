@@ -15,4 +15,14 @@ public class StatisticsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+}    @Test
+void findMaxWhenAllNumbersAreSame() {
+    StatisticsService service = new StatisticsService();
+    // Все числа одинаковые, поэтому условие (currentMax < income) всегда false
+    long[] incomesInBillions = {10, 10, 10, 10};
+    long expected = 10;
+
+    long actual = service.findMax(incomesInBillions);
+
+    Assertions.assertEquals(expected, actual);
 }
