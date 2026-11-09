@@ -27,4 +27,15 @@ public class StatisticsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    void findMaxWhenMaxIsAtTheEnd() {
+        StatisticsService service = new StatisticsService();
+        long[] incomesInBillions = {5, 10}; // Второй элемент больше первого
+        long expected = 10;
+
+        long actual = service.findMax(incomesInBillions);
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
